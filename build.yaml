@@ -1,0 +1,29 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+    builders:
+      artemis:
+        options:
+          fragments_glob: lib/graphql/fragments/**.fragment.graphql
+          schema_mapping:
+            - schema: lib/graphql/schema.graphql
+              queries_glob: lib/graphql/queries/*/**.graphql
+              output: lib/graphql/graphql_api.dart
+          scalar_mapping:
+            - graphql_type: Upload
+              dart_type: String
+            - graphql_type: StringLowerCase
+              dart_type: String
+            - graphql_type: StringUpperCase
+              dart_type: String
+            - graphql_type: ImageUrl
+              dart_type: String
+            - graphql_type: GraphQlBigNumber
+              custom_parser_import: 'coercers/coercers.dart'
+              dart_type: double
+            - graphql_type: UnixTimeSeconds
+              custom_parser_import: 'coercers/coercers.dart'
+              dart_type: int
+            - graphql_type: UUID4
+              dart_type: String
