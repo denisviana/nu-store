@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.14.0 <3.0.0"
 
 dependencies:
   flutter_localizations:
@@ -27,57 +27,49 @@ dependencies:
     sdk: flutter
 
   #region UI Stuff
-  cupertino_icons: ^1.0.2
-  google_fonts: ^2.0.0
-  intl_utils: ^2.2.0
+  cupertino_icons: ^1.0.3
+  google_fonts: ^2.1.0
+  intl_utils: ^2.4.1
   flutter_svg: ^0.22.0
   auto_size_text: ^3.0.0-nullsafety.0
   shimmer: ^2.0.0
   #endregion
 
   #region Local
-  flutter_secure_storage: ^4.2.0
-  shared_preferences: ^2.0.5
+  flutter_secure_storage: ^4.2.1
+  shared_preferences: ^2.0.8
   #endregion
 
   #region Arch and State Management
-  get: ^4.1.4
-  package_info: ^2.0.0
-  lint: ^1.5.3
+  get: ^4.3.8
+  package_info: ^2.0.2
+  lint: ^1.7.2
   #endregion
 
   #region Dependency Injection
-  injectable: ^1.3.0
-  get_it: ^6.1.1
+  injectable: ^1.5.0
+  get_it: ^7.2.0
   #endregion
 
   #region Network
-  graphql_flutter: ^5.0.0-nullsafety.1
-  graphql: ^5.0.0-nullsafety.1
   dio: ^4.0.0
-  oauth_dio: ^0.2.3
+  oauth_dio: ^0.2.6
   #endregion
 
   #region Dart and Others
-  equatable: ^2.0.0
+  equatable: ^2.0.3
   tuple: ^2.0.0
-  meta: ^1.3.0
+  meta: ^1.7.0
   intl: ^0.17.0
-  share: ^2.0.1
+  share: ^2.0.4
   flinq: ^2.0.2
-  #endregion
-
-  #region Artemis
-  json_annotation: ^4.0.1
-  gql: ^0.13.0-nullsafety.1
   #endregion
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^2.0.1
-  artemis: ^7.0.0-beta.3
-  injectable_generator: ^1.3.0
+  build_runner: ^2.1.4
+  injectable_generator: ^1.5.2
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
