@@ -1,4 +1,4 @@
-package com.sisnet.radio_life
+package com.example.myapp
 
 import io.flutter.embedding.android.FlutterActivity
 
