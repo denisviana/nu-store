@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:radio_life/core/data/enum/status.dart';
+import 'package:my_app/core/data/enum/status.dart';
 
 import 'app_exception.dart';
 

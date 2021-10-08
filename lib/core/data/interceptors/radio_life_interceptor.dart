@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
-class RadioLifeInterceptor {
+class MyAppInterceptor {
 
   static InterceptorsWrapper init(Dio dio, String language, FlutterSecureStorage flutterSecureStorage)=> InterceptorsWrapper(
         onRequest: (RequestOptions options, handler) async {

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:radio_life/app/styles/theme_data_radio_life.dart';
+import 'package:my_app/app/styles/theme_data_radio_life.dart';
 
 import 'app_color_scheme.dart';
 import 'app_font_size.dart';
@@ -9,7 +9,7 @@ import 'app_spacing.dart';
 import 'app_text_theme.dart';
 
 /// https://medium.com/flutter-community/page-transitions-using-themedata-in-flutter-c24afadb0b5d
-class AppThemeData extends ThemeDataRadioLife {
+class AppThemeData extends ThemeDataMyApp {
   AppThemeData._();
 
   static bool? _appThemeModeIsDark;
@@ -19,11 +19,11 @@ class AppThemeData extends ThemeDataRadioLife {
   }
 
   static bool get appThemeModeIsDark =>
-      _appThemeModeIsDark ?? ThemeDataRadioLife.isDark ?? true;
+      _appThemeModeIsDark ?? ThemeDataMyApp.isDark ?? true;
 
   static ThemeData get themeData =>
       appThemeModeIsDark ? themeDataDark : themeDataLight;
-  static ThemeMode get themeMode => ThemeDataRadioLife.isDark == null
+  static ThemeMode get themeMode => ThemeDataMyApp.isDark == null
       ? ThemeMode.system
       : appThemeModeIsDark
           ? ThemeMode.dark

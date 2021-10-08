@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:injectable/injectable.dart';
-import 'package:radio_life/core/data/interceptors/radio_life_interceptor.dart';
-import 'package:radio_life/core/data/network/dio_client.dart';
-import 'package:radio_life/flavors/flavor_values.dart';
+import 'package:my_app/core/data/interceptors/radio_life_interceptor.dart';
+import 'package:my_app/core/data/network/dio_client.dart';
+import 'package:my_app/flavors/flavor_values.dart';
 
 // Use this module to inject your third-party dependencies like [FirebaseAuth]
 // E.g. FirebaseAuth get firebaseAuth => FirebaseAuth.instance;
@@ -31,7 +31,7 @@ abstract class RemoteModule {
           Dio dio,
           @Named('language') String language,
           FlutterSecureStorage flutterSecureStorage) =>
-      RadioLifeInterceptor.init(dio, language, flutterSecureStorage);
+      MyAppInterceptor.init(dio, language, flutterSecureStorage);
 
   DioClient provideApi(Dio dio, InterceptorsWrapper interceptor) {
     dio.interceptors.add(interceptor);

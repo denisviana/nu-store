@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:radio_life/app/utils/style_utils.dart';
+import 'package:my_app/app/utils/style_utils.dart';
 
 import 'app_theme_data.dart';
 

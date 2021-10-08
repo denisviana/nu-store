@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:radio_life/app/utils/string_utils.dart';
+import 'package:my_app/app/utils/string_utils.dart';
 
 // ignore: constant_identifier_names
 enum Flavor { DEV, PRODUCTION }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
-import 'package:radio_life/app/styles/theme_data_radio_life.dart';
+import 'package:my_app/app/styles/theme_data_radio_life.dart';
 
 import '../generated/l10n.dart';
 import 'app_binding.dart';
@@ -23,7 +23,7 @@ class AppWidget extends StatelessWidget {
         ],
         supportedLocales: S.delegate.supportedLocales,
         builder: (context, child) {
-          ThemeDataRadioLife.setIsDark(context);
+          ThemeDataMyApp.setIsDark(context);
           return Scaffold(
             backgroundColor: AppColorScheme.background,
             body: GestureDetector(

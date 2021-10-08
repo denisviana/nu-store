@@ -656,13 +656,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "radio_life",
+      "name": "my_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2021-10-08T17:12:07.710870Z",
+  "generated": "2021-10-08T17:13:11.693656Z",
   "generator": "pub",
   "generatorVersion": "2.14.3"
 }
