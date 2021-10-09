@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:injectable/injectable.dart';
-import 'package:my_app/core/data/interceptors/radio_life_interceptor.dart';
+import 'package:my_app/core/data/interceptors/app_interceptor.dart';
 import 'package:my_app/core/data/network/dio_client.dart';
 import 'package:my_app/flavors/flavor_values.dart';
 
