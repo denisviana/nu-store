@@ -49,6 +49,26 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Olá, {userName}`
+  String olaUser(Object userName) {
+    return Intl.message(
+      'Olá, $userName',
+      name: 'olaUser',
+      desc: '',
+      args: [userName],
+    );
+  }
+
+  /// `Saldo:`
+  String get saldo {
+    return Intl.message(
+      'Saldo:',
+      name: 'saldo',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

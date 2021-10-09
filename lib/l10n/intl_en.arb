@@ -1,1 +1,4 @@
-{}
+{
+  "olaUser": "Olá, {userName}",
+  "saldo": "Saldo:"
+}

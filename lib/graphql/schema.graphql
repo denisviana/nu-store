@@ -1,0 +1,43 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: QueryRoot
+    mutation: MutationRoot
+}
+
+type Customer {
+    balance: Int!
+    id: ID!
+    name: String!
+    offers: [Offer]!
+}
+
+type MutationRoot {
+    purchase(offerId: ID!): PurchaseMutationResponse
+}
+
+type Offer {
+    id: ID!
+    price: Int!
+    product: Product!
+}
+
+type Product {
+    description: String!
+    id: ID!
+    image: URL!
+    name: String!
+}
+
+type PurchaseMutationResponse {
+    customer: Customer!
+    errorMessage: String
+    success: Boolean!
+}
+
+type QueryRoot {
+    viewer: Customer
+}
+
+
+scalar URL
