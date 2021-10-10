@@ -12,6 +12,6 @@ class GetCustomerUseCase
   GetCustomerUseCase(this._customerRepository);
 
   @override
-  Future<Resource<CustomerEntity>> call([void params]) =>
+  Future<Resource<CustomerEntity?>> call([void params]) =>
       _customerRepository.getCustomer();
 }

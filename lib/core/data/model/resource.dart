@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:graphql/client.dart';
 import 'package:my_app/core/data/enum/status.dart';
+import 'package:my_app/generated/l10n.dart';
 
 import 'app_exception.dart';
 
@@ -23,7 +25,8 @@ class Resource<T> {
     _errorMapper = errorMapper;
   }
 
-  static Resource<T> loading<T>({T? data}) => Resource<T>(data: data, status: Status.loading);
+  static Resource<T> loading<T>({T? data}) =>
+      Resource<T>(data: data, status: Status.loading);
 
   static Resource<T> failed<T>({dynamic error, T? data}) => Resource<T>(
         error: error,
@@ -31,12 +34,32 @@ class Resource<T> {
         status: Status.failed,
       );
 
-  static Resource<T> success<T>({T? data}) => Resource<T>(data: data, status: Status.success);
+  static Resource<T> success<T>({T? data}) =>
+      Resource<T>(data: data, status: Status.success);
 
-  static FutureOr<Resource<T>> asFuture<T>(FutureOr<T> Function() req) async {
+  static Future<Resource<T>> asFuture<T>(Future<dynamic> Function() req,
+      FutureOr<T> Function(dynamic data) res) async {
     try {
-      final res = await req();
-      return success<T>(data: res);
+      final response = await req();
+      if (response is QueryResult) {
+        final data = response.data;
+        if (data != null &&
+            data['success'] == false &&
+            data['errorMessage'] != null)
+          return failed<T>(
+            error: AppException(
+                title: S.current.error, description: data['errorMessage']),
+          );
+        else if (data == null)
+          return failed<T>(
+            error: AppException(
+                title: S.current.error,
+                description: S.current.somethingWentWrong),
+          );
+        else
+          return success<T>(data: await res(response.data));
+      }
+      return success<T>(data: response);
       // ignore: avoid_catches_without_on_clauses
     } catch (e) {
       final _errorMapped = _errorMapper(e);
