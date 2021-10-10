@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:my_app/app/utils/string_utils.dart';
 
 // ignore: constant_identifier_names
-enum Flavor { DEV, PRODUCTION }
+enum Flavor { DEV, PROD }
 
 class FlavorValues {
-  FlavorValues(
-      {required this.baseUrl,
-      required this.baseWebSocketUrl,
-      required this.imageUrl});
+  FlavorValues({
+    required this.baseUrl,
+    required this.token,
+  });
+
   final String baseUrl;
-  final String baseWebSocketUrl;
-  final String imageUrl;
+  final String token;
 }
 
 class FlavorConfig {
@@ -44,6 +44,7 @@ class FlavorConfig {
 
   static FlavorConfig get instance => _instance;
 
-  static bool isProduction() => _instance.flavor == Flavor.PRODUCTION;
+  static bool isProduction() => _instance.flavor == Flavor.PROD;
+
   static bool isDevelopment() => _instance.flavor == Flavor.DEV;
 }
