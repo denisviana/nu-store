@@ -1,4 +1,5 @@
 {
   "olaUser": "Olá, {userName}",
-  "saldo": "Saldo:"
+  "saldo": "Saldo:",
+  "buyNow": "Buy Now"
 }

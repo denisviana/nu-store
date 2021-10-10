@@ -9,6 +9,7 @@ import 'package:my_app/app/styles/app_font_size.dart';
 import 'package:my_app/app/styles/app_spacing.dart';
 import 'package:my_app/app/widgets/buttons/app_button.dart';
 
+import '../../../generated/l10n.dart';
 import 'offer_controller.dart';
 
 class OfferPage extends GetView<OfferController> {
@@ -67,7 +68,7 @@ class OfferPage extends GetView<OfferController> {
                     UIHelper.verticalSpaceMedium,
                     AppButton(
                       onPressed: () {},
-                      title: 'Buy Now',
+                      title: S.of(context).buyNow,
                       style: AppButtonStyle.filled,
                     )
                   ],

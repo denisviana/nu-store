@@ -26,6 +26,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "artemis",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/artemis-7.2.0-beta.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.1",
       "packageUri": "lib/",
@@ -81,13 +87,13 @@
     },
     {
       "name": "built_collection",
-      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/built_collection-5.0.0",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/built_collection-5.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "built_value",
-      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/built_value-8.0.5",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/built_value-8.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -152,6 +158,42 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "connectivity_plus",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_plus-1.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "connectivity_plus_linux",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_plus_linux-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "connectivity_plus_macos",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_plus_macos-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "connectivity_plus_platform_interface",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_plus_platform_interface-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "connectivity_plus_web",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_plus_web-1.1.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "connectivity_plus_windows",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_plus_windows-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "convert",
       "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.0",
       "packageUri": "lib/",
@@ -176,8 +218,8 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "dio",
-      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/dio-4.0.0",
+      "name": "dbus",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/dbus-0.5.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -296,16 +338,82 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "gql",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/gql-0.13.1-alpha+1633799193898",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "gql_code_builder2",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/gql_code_builder2-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "gql_dedupe_link",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/gql_dedupe_link-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "gql_error_link",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/gql_error_link-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "gql_exec",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/gql_exec-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "gql_http_link",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/gql_http_link-0.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "gql_link",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/gql_link-0.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "gql_transform_link",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/gql_transform_link-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "graphql",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/graphql-5.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "graphql_flutter",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/graphql_flutter-5.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "graphs",
       "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/graphs-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "http",
-      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.2",
+      "name": "hive",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/hive-2.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "http_multi_server",
@@ -357,7 +465,13 @@
     },
     {
       "name": "json_annotation",
-      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/json_annotation-4.0.1",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/json_annotation-4.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "json_serializable",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/json_serializable-5.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -392,8 +506,14 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "oauth_dio",
-      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/oauth_dio-0.2.6",
+      "name": "nm",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/nm-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "normalize",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/normalize-0.5.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -518,8 +638,14 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "recase",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/recase-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "rxdart",
-      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.27.2",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.26.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -592,6 +718,12 @@
     {
       "name": "source_gen",
       "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/source_gen-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "source_helper",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/source_helper-1.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -728,7 +860,7 @@
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2021-10-10T00:14:47.565681Z",
+  "generated": "2021-10-10T14:31:15.722883Z",
   "generator": "pub",
   "generatorVersion": "2.14.3"
 }

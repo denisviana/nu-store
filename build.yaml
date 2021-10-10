@@ -2,17 +2,21 @@ targets:
   $default:
     sources:
       - lib/**
+      - $package$
     builders:
       artemis:
         options:
-          fragments_glob: lib/graphql/fragments/**.fragment.graphql
           schema_mapping:
             - schema: lib/graphql/schema.graphql
-              queries_glob: lib/graphql/queries/*/**.graphql
+              queries_glob: lib/graphql/queries/**.graphql
               output: lib/graphql/graphql_api.dart
           scalar_mapping:
             - graphql_type: Upload
-              dart_type: String
+              custom_parser_import: 'coercers/coercers.dart'
+              dart_type:
+                name: MultipartFile
+                imports:
+                  - package:http/http.dart
             - graphql_type: StringLowerCase
               dart_type: String
             - graphql_type: StringUpperCase
@@ -21,9 +25,19 @@ targets:
               dart_type: String
             - graphql_type: GraphQlBigNumber
               custom_parser_import: 'coercers/coercers.dart'
-              dart_type: double
+              dart_type:
+                name: Decimal
+                imports:
+                  - package:decimal/decimal.dart
             - graphql_type: UnixTimeSeconds
               custom_parser_import: 'coercers/coercers.dart'
               dart_type: int
-            - graphql_type: UUID4
+            - graphql_type: UnixTimestamp
+              custom_parser_import: 'coercers/coercers.dart'
+              dart_type: int
+            - graphql_type: ID
+              dart_type: String
+            - graphql_type: URL
+              dart_type: String
+            - graphql_type: JSONObject
               dart_type: String

@@ -41,6 +41,11 @@ dependencies:
   shared_preferences: ^2.0.8
   #endregion
 
+  #region Network
+  graphql_flutter: ^5.0.0
+  graphql: ^5.0.0
+  #endregion
+
   #region Arch and State Management
   get: ^4.3.8
   package_info: ^2.0.2
@@ -52,9 +57,9 @@ dependencies:
   get_it: ^7.2.0
   #endregion
 
-  #region Network
-  dio: ^4.0.0
-  oauth_dio: ^0.2.6
+  #region Artemis
+  json_annotation: ^4.1.0
+  gql: ^0.13.0
   #endregion
 
   #region Dart and Others
@@ -66,11 +71,18 @@ dependencies:
   flinq: ^2.0.2
   #endregion
 
+dependency_overrides:
+  analyzer: ^2.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^2.1.4
   injectable_generator: ^1.5.2
+  artemis: ^7.2.0-beta.0
+  json_serializable: ^5.0.2
+  #endregion
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
