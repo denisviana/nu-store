@@ -24,7 +24,7 @@ class HomeController extends GetxController {
               'https://vignette.wikia.nocookie.net/rickandmorty/images/8/86/Microverse_Battery.png/revision/latest/scale-to-width-down/310?cb=20160910010946',
         ),
         OfferModel(
-          id: '1',
+          id: '2',
           price: 'R\$ 124,00',
           productDescription:
               'The Portal Gun is a gadget that allows the user(s) to travel between different universes/dimensions/realities.',
@@ -34,7 +34,7 @@ class HomeController extends GetxController {
               'https://vignette.wikia.nocookie.net/rickandmorty/images/8/86/Microverse_Battery.png/revision/latest/scale-to-width-down/310?cb=20160910010946',
         ),
         OfferModel(
-          id: '1',
+          id: '3',
           price: 'R\$ 124,00',
           productDescription:
               'The Portal Gun is a gadget that allows the user(s) to travel between different universes/dimensions/realities.',
@@ -44,7 +44,7 @@ class HomeController extends GetxController {
               'https://vignette.wikia.nocookie.net/rickandmorty/images/8/86/Microverse_Battery.png/revision/latest/scale-to-width-down/310?cb=20160910010946',
         ),
         OfferModel(
-          id: '1',
+          id: '4',
           price: 'R\$ 124,00',
           productDescription:
               'The Portal Gun is a gadget that allows the user(s) to travel between different universes/dimensions/realities.',
@@ -54,7 +54,7 @@ class HomeController extends GetxController {
               'https://vignette.wikia.nocookie.net/rickandmorty/images/8/86/Microverse_Battery.png/revision/latest/scale-to-width-down/310?cb=20160910010946',
         ),
         OfferModel(
-          id: '1',
+          id: '5',
           price: 'R\$ 124,00',
           productDescription:
               'The Portal Gun is a gadget that allows the user(s) to travel between different universes/dimensions/realities.',

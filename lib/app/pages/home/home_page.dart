@@ -1,14 +1,13 @@
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_app/app/helpers/ui_helper.dart';
 import 'package:my_app/app/pages/home/model/offer_model.dart';
-import 'package:my_app/app/styles/app_border_radius.dart';
+import 'package:my_app/app/pages/offer_details/offer_page.dart';
 import 'package:my_app/app/styles/app_color_scheme.dart';
 import 'package:my_app/app/styles/app_font_size.dart';
 import 'package:my_app/app/styles/app_font_weight.dart';
 import 'package:my_app/app/styles/app_spacing.dart';
+import 'package:my_app/app/widgets/offer/offer_widget.dart';
 
 import '../../../generated/l10n.dart';
 import 'home_controller.dart';
@@ -94,59 +93,12 @@ class HomePage extends GetView<HomeController> {
           height: 0.5,
           color: AppColorScheme.border,
         ),
-        itemBuilder: (context, index) => Container(
-          decoration: BoxDecoration(
-            borderRadius: AppBorderRadius.small,
-          ),
-          padding: const EdgeInsets.symmetric(
-            vertical: AppSpacing.medium,
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ClipRRect(
-                borderRadius: AppBorderRadius.small,
-                child: CachedNetworkImage(
-                  imageUrl: offers[index].productImage,
-                  width: 100,
-                ),
-              ),
-              UIHelper.horizontalSpaceExtraMedium,
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      offers[index].productName,
-                      style: TextStyle(
-                          fontSize: AppFontSize.large,
-                          color: AppColorScheme.emphasis,
-                          fontWeight: AppFontWeight.semiBold),
-                    ),
-                    UIHelper.verticalSpaceTiny,
-                    AutoSizeText(
-                      offers[index].productDescription,
-                      textAlign: TextAlign.justify,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: AppFontSize.secondary,
-                        color: AppColorScheme.emphasis,
-                      ),
-                    ),
-                    UIHelper.verticalSpaceTiny,
-                    Text(
-                      offers[index].price,
-                      style: TextStyle(
-                          fontSize: AppFontSize.large,
-                          color: AppColorScheme.success,
-                          fontWeight: AppFontWeight.semiBold),
-                    ),
-                  ],
-                ),
-              )
-            ],
+        itemBuilder: (context, index) => InkWell(
+          onTap: () {
+            OfferPage.navigateWith(arguments: offers[index]);
+          },
+          child: OfferWidget(
+            model: offers[index],
           ),
         ),
       );
