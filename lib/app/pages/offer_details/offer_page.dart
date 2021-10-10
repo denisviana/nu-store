@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_app/app/app_routes.dart';
@@ -36,9 +35,8 @@ class OfferPage extends GetView<OfferController> {
                     Center(
                       child: Hero(
                         tag: controller.state.value.data?.id ?? '',
-                        child: CachedNetworkImage(
-                          imageUrl:
-                              controller.state.value.data?.productImage ?? '',
+                        child: Image.network(
+                          controller.state.value.data?.productImage ?? '',
                           height: 300,
                         ),
                       ),

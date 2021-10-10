@@ -1,5 +1,4 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/app/helpers/ui_helper.dart';
@@ -31,8 +30,8 @@ class OfferWidget extends StatelessWidget {
           borderRadius: AppBorderRadius.small,
           child: Hero(
             tag: model.id,
-            child: CachedNetworkImage(
-              imageUrl: model.productImage,
+            child: Image.network(
+              model.productImage,
               width: 100,
             ),
           ),

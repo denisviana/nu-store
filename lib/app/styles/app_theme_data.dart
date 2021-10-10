@@ -31,10 +31,8 @@ class AppThemeData extends ThemeDataMyApp {
 
   static final ThemeData themeDataLight = ThemeData(
     brightness: Brightness.light,
-    accentColorBrightness: Brightness.light,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     primarySwatch: AppColorScheme.primarySwatchLight,
-    accentColor: AppColorScheme.accentColorLight,
     textTheme: AppTextTheme.textTheme,
     bottomSheetTheme:
         const BottomSheetThemeData(backgroundColor: Colors.transparent),
@@ -60,7 +58,6 @@ class AppThemeData extends ThemeDataMyApp {
     ),
     appBarTheme: const AppBarTheme(
         backgroundColor: RadioLifeLightThemeColors.background,
-        brightness: Brightness.light,
         elevation: 0),
     pageTransitionsTheme: const PageTransitionsTheme(
       builders: {
@@ -88,9 +85,7 @@ class AppThemeData extends ThemeDataMyApp {
   static final ThemeData themeDataDark = ThemeData(
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.dark,
-    accentColorBrightness: Brightness.dark,
     primarySwatch: AppColorScheme.primarySwatchDark,
-    accentColor: AppColorScheme.accentColorDark,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
     tabBarTheme: const TabBarTheme(
@@ -117,7 +112,6 @@ class AppThemeData extends ThemeDataMyApp {
     appBarTheme: const AppBarTheme(
       backgroundColor: RadioLifeDarkThemeColors.background,
       elevation: 0,
-      brightness: Brightness.dark,
     ),
     pageTransitionsTheme: const PageTransitionsTheme(
       builders: {
