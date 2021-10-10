@@ -43,6 +43,12 @@ class Resource<T> {
       final response = await req();
       if (response is QueryResult) {
         final data = response.data;
+
+        if (response.hasException)
+          return failed<T>(
+            error: _errorMapper(response.exception),
+          );
+
         if (data != null &&
             data['success'] == false &&
             data['errorMessage'] != null)

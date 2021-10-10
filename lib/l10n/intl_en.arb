@@ -1,7 +1,11 @@
 {
-  "olaUser": "Olá, {userName}",
-  "saldo": "Saldo:",
+  "olaUser": "Hello, {userName}",
+  "saldo": "Balance:",
   "buyNow": "Buy Now",
   "somethingWentWrong": "Something went wrong",
-  "error": "Error"
+  "error": "Error",
+  "currencySymbol": "$",
+  "ok": "Ok",
+  "retry": "Retry",
+  "noOffersAvailable": "No offers available"
 }

@@ -1,4 +1,5 @@
 import 'package:graphql/client.dart';
+import 'package:my_app/flavors/flavor_values.dart';
 
 class AppGraphQLClient {
   AppGraphQLClient._();
@@ -7,8 +8,7 @@ class AppGraphQLClient {
     HttpLink httpLink,
   ) {
     final authLink = AuthLink(
-        getToken: () async =>
-            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhd2Vzb21lY3VzdG9tZXJAZ21haWwuY29tIn0.cGT2KqtmT8KNIJhyww3T8fAzUsCD5_vxuHl5WbXtp8c');
+        getToken: () async => 'Bearer ${FlavorConfig.instance.values.token}');
 
     final link = authLink.concat(httpLink);
 

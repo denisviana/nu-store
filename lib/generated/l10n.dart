@@ -50,20 +50,20 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Olá, {userName}`
+  /// `Hello, {userName}`
   String olaUser(Object userName) {
     return Intl.message(
-      'Olá, $userName',
+      'Hello, $userName',
       name: 'olaUser',
       desc: '',
       args: [userName],
     );
   }
 
-  /// `Saldo:`
+  /// `Balance:`
   String get saldo {
     return Intl.message(
-      'Saldo:',
+      'Balance:',
       name: 'saldo',
       desc: '',
       args: [],
@@ -95,6 +95,46 @@ class S {
     return Intl.message(
       'Error',
       name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `$`
+  String get currencySymbol {
+    return Intl.message(
+      '\$',
+      name: 'currencySymbol',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ok`
+  String get ok {
+    return Intl.message(
+      'Ok',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Retry`
+  String get retry {
+    return Intl.message(
+      'Retry',
+      name: 'retry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No offers available`
+  String get noOffersAvailable {
+    return Intl.message(
+      'No offers available',
+      name: 'noOffersAvailable',
       desc: '',
       args: [],
     );

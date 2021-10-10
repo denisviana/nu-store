@@ -7,6 +7,6 @@ extension CustomerExtension on Viewer$QueryRoot$Customer {
   CustomerEntity get toEntity => CustomerEntity(
         name: name,
         balance: balance,
-        offers: offers.map((offer) => offer?.toEntity).toList(),
+        offers: offers.map((e) => e?.toEntity).toList(),
       );
 }

@@ -42,6 +42,7 @@ class OfferPage extends GetView<OfferController> {
                         ),
                       ),
                     ),
+                    UIHelper.verticalSpaceSmall,
                     Text(
                       controller.state.value.data?.productName ?? '',
                       style: TextStyle(

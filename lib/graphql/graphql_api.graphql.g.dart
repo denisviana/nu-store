@@ -75,7 +75,7 @@ Viewer$QueryRoot$Customer _$Viewer$QueryRoot$CustomerFromJson(
       ..id = json['id'] as String
       ..name = json['name'] as String
       ..balance = json['balance'] as int
-      ..offers = (json['offer'] as List<dynamic>)
+      ..offers = (json['offers'] as List<dynamic>)
           .map((e) => e == null
               ? null
               : Viewer$QueryRoot$Customer$Offer.fromJson(
@@ -88,7 +88,7 @@ Map<String, dynamic> _$Viewer$QueryRoot$CustomerToJson(
       'id': instance.id,
       'name': instance.name,
       'balance': instance.balance,
-      'offer': instance.offers.map((e) => e?.toJson()).toList(),
+      'offers': instance.offers.map((e) => e?.toJson()).toList(),
     };
 
 Viewer$QueryRoot _$Viewer$QueryRootFromJson(Map<String, dynamic> json) =>

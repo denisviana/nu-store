@@ -2,7 +2,7 @@ class AppException<E> implements Exception {
   final String? title;
   final String? description;
   final E? exception;
-  final dynamic? data;
+  final dynamic data;
 
   AppException({
     this.title,

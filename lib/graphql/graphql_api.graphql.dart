@@ -230,7 +230,7 @@ final VIEWER_QUERY_DOCUMENT = DocumentNode(definitions: [
                   directives: [],
                   selectionSet: null),
               FieldNode(
-                  name: NameNode(value: 'offer'),
+                  name: NameNode(value: 'offers'),
                   alias: null,
                   arguments: [],
                   directives: [],
