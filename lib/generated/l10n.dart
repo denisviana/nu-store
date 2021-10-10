@@ -139,6 +139,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Your purchase was successful`
+  String get yourPurchaseWasSuccessful {
+    return Intl.message(
+      'Your purchase was successful',
+      name: 'yourPurchaseWasSuccessful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success`
+  String get success {
+    return Intl.message(
+      'Success',
+      name: 'success',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

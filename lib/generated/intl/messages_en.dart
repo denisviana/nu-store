@@ -33,6 +33,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "saldo": MessageLookupByLibrary.simpleMessage("Balance:"),
         "somethingWentWrong":
-            MessageLookupByLibrary.simpleMessage("Something went wrong")
+            MessageLookupByLibrary.simpleMessage("Something went wrong"),
+        "success": MessageLookupByLibrary.simpleMessage("Success"),
+        "yourPurchaseWasSuccessful":
+            MessageLookupByLibrary.simpleMessage("Your purchase was successful")
       };
 }

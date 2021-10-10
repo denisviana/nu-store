@@ -8,6 +8,7 @@ import 'package:my_app/app/widgets/dialog/simple_dialog.dart';
 import 'package:my_app/core/data/enum/status.dart';
 import 'package:my_app/core/data/model/app_exception.dart';
 import 'package:my_app/core/data/model/resource.dart';
+import 'package:my_app/core/domain/entities/customer/customer_entity.dart';
 import 'package:my_app/core/domain/use_cases/customer/get_customer_use_case.dart';
 import 'package:my_app/generated/l10n.dart';
 
@@ -30,10 +31,11 @@ class HomeController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    _getCustomer();
+    getCustomer();
   }
 
-  Future _getCustomer() async {
+  Future getCustomer() async {
+    state.value = Resource.loading();
     final response = await _getCustomerUseCase();
     switch (response.status) {
       case Status.loading:
@@ -47,7 +49,7 @@ class HomeController extends GetxController {
                     title: S.current.error, data: S.current.somethingWentWrong),
           );
         else
-          state.value = Resource.success(data: HomeAdapter.toViewModel(data));
+          state.value = Resource.success(data: HomeAdapter.fromEntity(data));
         break;
       case Status.failed:
         _handleError(
@@ -59,6 +61,12 @@ class HomeController extends GetxController {
     }
   }
 
+  void updateUI(CustomerEntity customer) {
+    state.value = Resource.success(
+      data: HomeAdapter.fromEntity(customer),
+    );
+  }
+
   void _handleError(AppException error) {
     Get.appDialog(
       barrierDismissible: false,
@@ -68,7 +76,7 @@ class HomeController extends GetxController {
         buttonTitle: S.current.retry,
         icon: Icon(Icons.error_outline, size: 50, color: AppColorScheme.error),
         onButtonPressed: () {
-          _getCustomer();
+          getCustomer();
         },
       ),
     );

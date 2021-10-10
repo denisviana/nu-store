@@ -806,6 +806,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "uiblock",
+      "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/uiblock-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "uuid",
       "rootUri": "file:///Users/denisviana/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-3.0.5",
       "packageUri": "lib/",
@@ -860,7 +866,7 @@
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2021-10-10T14:31:15.722883Z",
+  "generated": "2021-10-10T20:31:17.363638Z",
   "generator": "pub",
   "generatorVersion": "2.14.3"
 }

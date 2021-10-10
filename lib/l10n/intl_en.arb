@@ -7,5 +7,7 @@
   "currencySymbol": "$",
   "ok": "Ok",
   "retry": "Retry",
-  "noOffersAvailable": "No offers available"
+  "noOffersAvailable": "No offers available",
+  "yourPurchaseWasSuccessful": "Your purchase was successful",
+  "success": "Success"
 }

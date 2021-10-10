@@ -49,12 +49,12 @@ class Resource<T> {
             error: _errorMapper(response.exception),
           );
 
-        if (data != null &&
-            data['success'] == false &&
-            data['errorMessage'] != null)
+        if (data != null && data['purchase'] != null &&
+            data['purchase']['success'] == false &&
+            data['purchase']['errorMessage'] != null)
           return failed<T>(
             error: AppException(
-                title: S.current.error, description: data['errorMessage']),
+                title: S.current.error, description: data['purchase']['errorMessage']),
           );
         else if (data == null)
           return failed<T>(

@@ -8,6 +8,82 @@ import 'package:gql/ast.dart';
 part 'graphql_api.graphql.g.dart';
 
 @JsonSerializable(explicitToJson: true)
+class Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$Product
+    extends JsonSerializable with EquatableMixin {
+  Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$Product();
+
+  factory Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$Product.fromJson(
+          Map<String, dynamic> json) =>
+      _$Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$ProductFromJson(
+          json);
+
+  late String id;
+
+  late String name;
+
+  late String description;
+
+  late String image;
+
+  @override
+  List<Object?> get props => [id, name, description, image];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$ProductToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer
+    extends JsonSerializable with EquatableMixin {
+  Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer();
+
+  factory Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer.fromJson(
+          Map<String, dynamic> json) =>
+      _$Purchase$MutationRoot$PurchaseMutationResponse$Customer$OfferFromJson(
+          json);
+
+  late String id;
+
+  late int price;
+
+  late Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$Product
+      product;
+
+  @override
+  List<Object?> get props => [id, price, product];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$Purchase$MutationRoot$PurchaseMutationResponse$Customer$OfferToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Purchase$MutationRoot$PurchaseMutationResponse$Customer
+    extends JsonSerializable with EquatableMixin {
+  Purchase$MutationRoot$PurchaseMutationResponse$Customer();
+
+  factory Purchase$MutationRoot$PurchaseMutationResponse$Customer.fromJson(
+          Map<String, dynamic> json) =>
+      _$Purchase$MutationRoot$PurchaseMutationResponse$CustomerFromJson(json);
+
+  late String id;
+
+  late String name;
+
+  late int balance;
+
+  late List<Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer?>
+      offers;
+
+  @override
+  List<Object?> get props => [id, name, balance, offers];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$Purchase$MutationRoot$PurchaseMutationResponse$CustomerToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
 class Purchase$MutationRoot$PurchaseMutationResponse extends JsonSerializable
     with EquatableMixin {
   Purchase$MutationRoot$PurchaseMutationResponse();
@@ -16,12 +92,14 @@ class Purchase$MutationRoot$PurchaseMutationResponse extends JsonSerializable
           Map<String, dynamic> json) =>
       _$Purchase$MutationRoot$PurchaseMutationResponseFromJson(json);
 
+  late Purchase$MutationRoot$PurchaseMutationResponse$Customer customer;
+
   late bool success;
 
   String? errorMessage;
 
   @override
-  List<Object?> get props => [success, errorMessage];
+  List<Object?> get props => [customer, success, errorMessage];
   @override
   Map<String, dynamic> toJson() =>
       _$Purchase$MutationRoot$PurchaseMutationResponseToJson(this);
@@ -162,6 +240,81 @@ final PURCHASE_MUTATION_DOCUMENT = DocumentNode(definitions: [
             ],
             directives: [],
             selectionSet: SelectionSetNode(selections: [
+              FieldNode(
+                  name: NameNode(value: 'customer'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: SelectionSetNode(selections: [
+                    FieldNode(
+                        name: NameNode(value: 'id'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null),
+                    FieldNode(
+                        name: NameNode(value: 'name'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null),
+                    FieldNode(
+                        name: NameNode(value: 'balance'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null),
+                    FieldNode(
+                        name: NameNode(value: 'offers'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: SelectionSetNode(selections: [
+                          FieldNode(
+                              name: NameNode(value: 'id'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null),
+                          FieldNode(
+                              name: NameNode(value: 'price'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null),
+                          FieldNode(
+                              name: NameNode(value: 'product'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: SelectionSetNode(selections: [
+                                FieldNode(
+                                    name: NameNode(value: 'id'),
+                                    alias: null,
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: null),
+                                FieldNode(
+                                    name: NameNode(value: 'name'),
+                                    alias: null,
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: null),
+                                FieldNode(
+                                    name: NameNode(value: 'description'),
+                                    alias: null,
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: null),
+                                FieldNode(
+                                    name: NameNode(value: 'image'),
+                                    alias: null,
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: null)
+                              ]))
+                        ]))
+                  ])),
               FieldNode(
                   name: NameNode(value: 'success'),
                   alias: null,

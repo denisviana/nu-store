@@ -10,3 +10,12 @@ extension CustomerExtension on Viewer$QueryRoot$Customer {
         offers: offers.map((e) => e?.toEntity).toList(),
       );
 }
+
+extension PurchaseCustomerExtension
+    on Purchase$MutationRoot$PurchaseMutationResponse {
+  CustomerEntity get toEntity => CustomerEntity(
+        name: customer.name,
+        balance: customer.balance,
+        offers: customer.offers.map((e) => e?.toEntity).toList(),
+      );
+}

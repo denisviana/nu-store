@@ -6,7 +6,7 @@ import 'package:my_app/core/domain/entities/customer/customer_entity.dart';
 abstract class HomeAdapter {
   HomeAdapter._();
 
-  static HomeViewModel toViewModel(CustomerEntity customerEntity) =>
+  static HomeViewModel fromEntity(CustomerEntity customerEntity) =>
       HomeViewModel(
         userName: customerEntity.name,
         userBalance: CurrencyHelper.doubleToCurrency(

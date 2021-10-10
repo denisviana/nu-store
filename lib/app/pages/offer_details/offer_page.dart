@@ -13,8 +13,9 @@ import '../../../generated/l10n.dart';
 import 'offer_controller.dart';
 
 class OfferPage extends GetView<OfferController> {
-  static Future? navigateWith({required OfferModel arguments}) =>
-      Get.toNamed(Routes.offerDetails, arguments: arguments);
+  static Future<CustomerEntity?>? navigateWith<CustomerEntity>(
+          {required OfferModel arguments}) =>
+      Get.toNamed<CustomerEntity>(Routes.offerDetails, arguments: arguments);
 
   @override
   Widget build(BuildContext context) => GetBuilder<OfferController>(
@@ -68,7 +69,9 @@ class OfferPage extends GetView<OfferController> {
                     ),
                     UIHelper.verticalSpaceMedium,
                     AppButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.purchaseOffer();
+                      },
                       title: S.of(context).buyNow,
                       style: AppButtonStyle.filled,
                     )

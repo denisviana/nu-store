@@ -3,6 +3,7 @@ import 'package:my_app/app/pages/home/bindings/home_bindings.dart';
 import 'package:my_app/app/pages/home/home_page.dart';
 import 'package:my_app/app/pages/offer_details/bindings/offer_bindings.dart';
 import 'package:my_app/app/pages/offer_details/offer_page.dart';
+import 'package:my_app/core/domain/entities/customer/customer_entity.dart';
 
 abstract class Routes {
   static const initial = '/';
@@ -16,7 +17,7 @@ mixin AppRoutes {
       page: () => HomePage(),
       binding: HomeBinding(),
     ),
-    GetPage(
+    GetPage<CustomerEntity?>(
         name: Routes.offerDetails,
         page: () => OfferPage(),
         binding: OfferBinding())

@@ -154,8 +154,10 @@ class HomePage extends GetView<HomeController> {
           color: AppColorScheme.border,
         ),
         itemBuilder: (context, index) => InkWell(
-          onTap: () {
-            OfferPage.navigateWith(arguments: offers[index]);
+          onTap: () async {
+            final result =
+                await OfferPage.navigateWith(arguments: offers[index]);
+            if (result != null) controller.updateUI(result);
           },
           child: OfferWidget(
             model: offers[index],

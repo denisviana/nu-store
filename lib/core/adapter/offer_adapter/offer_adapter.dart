@@ -3,10 +3,18 @@ import 'package:my_app/graphql/graphql_api.dart';
 
 import '../product_adapter/product_adapter.dart';
 
-extension CustomerExtension on Viewer$QueryRoot$Customer$Offer {
+extension ViewerCustomerExtension on Viewer$QueryRoot$Customer$Offer {
   OfferEntity get toEntity => OfferEntity(
         id: id,
         price: price,
         product: product.toEntity,
       );
+}
+
+extension PurchaseCustomerExtension on Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer {
+  OfferEntity get toEntity => OfferEntity(
+    id:  id,
+    price: price,
+    product: product.toEntity,
+  );
 }

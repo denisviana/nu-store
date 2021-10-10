@@ -7,16 +7,84 @@ part of 'graphql_api.graphql.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$Product
+    _$Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$ProductFromJson(
+            Map<String, dynamic> json) =>
+        Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$Product()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..description = json['description'] as String
+          ..image = json['image'] as String;
+
+Map<String, dynamic>
+    _$Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$ProductToJson(
+            Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$Product
+                instance) =>
+        <String, dynamic>{
+          'id': instance.id,
+          'name': instance.name,
+          'description': instance.description,
+          'image': instance.image,
+        };
+
+Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer
+    _$Purchase$MutationRoot$PurchaseMutationResponse$Customer$OfferFromJson(
+            Map<String, dynamic> json) =>
+        Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer()
+          ..id = json['id'] as String
+          ..price = json['price'] as int
+          ..product =
+              Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer$Product
+                  .fromJson(json['product'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$Purchase$MutationRoot$PurchaseMutationResponse$Customer$OfferToJson(
+            Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer
+                instance) =>
+        <String, dynamic>{
+          'id': instance.id,
+          'price': instance.price,
+          'product': instance.product.toJson(),
+        };
+
+Purchase$MutationRoot$PurchaseMutationResponse$Customer
+    _$Purchase$MutationRoot$PurchaseMutationResponse$CustomerFromJson(
+            Map<String, dynamic> json) =>
+        Purchase$MutationRoot$PurchaseMutationResponse$Customer()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..balance = json['balance'] as int
+          ..offers = (json['offers'] as List<dynamic>)
+              .map((e) => e == null
+                  ? null
+                  : Purchase$MutationRoot$PurchaseMutationResponse$Customer$Offer
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$Purchase$MutationRoot$PurchaseMutationResponse$CustomerToJson(
+            Purchase$MutationRoot$PurchaseMutationResponse$Customer instance) =>
+        <String, dynamic>{
+          'id': instance.id,
+          'name': instance.name,
+          'balance': instance.balance,
+          'offers': instance.offers.map((e) => e?.toJson()).toList(),
+        };
+
 Purchase$MutationRoot$PurchaseMutationResponse
     _$Purchase$MutationRoot$PurchaseMutationResponseFromJson(
             Map<String, dynamic> json) =>
         Purchase$MutationRoot$PurchaseMutationResponse()
+          ..customer =
+              Purchase$MutationRoot$PurchaseMutationResponse$Customer.fromJson(
+                  json['customer'] as Map<String, dynamic>)
           ..success = json['success'] as bool
           ..errorMessage = json['errorMessage'] as String?;
 
 Map<String, dynamic> _$Purchase$MutationRoot$PurchaseMutationResponseToJson(
         Purchase$MutationRoot$PurchaseMutationResponse instance) =>
     <String, dynamic>{
+      'customer': instance.customer.toJson(),
       'success': instance.success,
       'errorMessage': instance.errorMessage,
     };
