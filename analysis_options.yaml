@@ -59,7 +59,6 @@ linter:
     - flutter_style_todos
     - hash_and_equals
     - implementation_imports
-    - invariant_booleans
     - iterable_contains_unrelated_type
     - join_return_with_assignment
     - library_names
@@ -161,6 +160,7 @@ analyzer:
     - lib/generated/intl/messages_en.dart
     - lib/**l10n.dart
     - lib/graphql/**
+    - lib/di/di.config.dart
   errors:
     #    avoid_as: error
     always_declare_return_types: error
